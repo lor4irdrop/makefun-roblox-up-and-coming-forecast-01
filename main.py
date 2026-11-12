@@ -41,8 +41,10 @@ DEFAULTS = {
     'drift_scale': 0.5,        # scale on band mean drift
     'jump_prob': 0.02,         # per game per hour
     'jump_sd': 8.0,            # score units of a jump
-    'sigma_scale': 1.1,        # scale on band volatilities (1.2 tested best,
-                               # 1.1 chosen to avoid over-tuning to 5 cuts)
+    'sigma_scale': 1.2,        # scale on band volatilities: measured on the
+                               # 5 rolling backtest cuts, 1.2 scores -34.86
+                               # vs 1.1's -34.92 (notes recorded -34.64 for
+                               # 1.2); 1.3 is worse (-34.96), so 1.2 it is
     'entry_per_hour': 0.75,    # brand-new games entering the chart
     'reentry_prob': 0.02,      # per exited game per hour
     'unnamed': [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13, 0.14],
